@@ -1,0 +1,70 @@
+organization:
+  name: "Western Cape Government - Dept of the Premier"
+  description: "Corporate Service Centre - Chart B2.1b"
+  root_unit:
+    name: "Directorate: Transversal Work Organisation Capacity Enablement"
+    type: "Directorate"
+    purpose: "To enable transversal work organisation capacity."
+    functions:
+      - "Render a transversal job design service."
+      - "Render a transversal organisation design service."
+      - "Facilitate transversal service delivery initiatives."
+    roles:
+      - title: "Director"
+        grade: "SL13"
+        count: 1
+    children:
+      - name: "Subdirectorate: Job Design"
+        type: "Subdirectorate"
+        purpose: "To render a transversal job design service."
+        functions:
+          - "Establish and maintain job design norms and standards."
+          - "Render a job design service."
+          - "Support job evaluation consultation and coordination."
+          - "Render a job design capacity building service."
+          - "Render a job information administration service."
+        roles:
+          - title: "Deputy Director"
+            grade: "SL11"
+            count: 1
+          - title: "Assistant Director"
+            grade: "SL9"
+            count: 3
+          - title: "OD Practitioner"
+            grade: "SL8"
+            count: 3
+
+      - name: "Subdirectorate: Transversal Organisation Design and Alignment"
+        type: "Subdirectorate"
+        purpose: "To render a transversal organisation design service."
+        functions:
+          - "Align transversal organisational design."
+          - "Enable macro and transversal capability improvement."
+        roles:
+          - title: "Deputy Director"
+            grade: "SL11"
+            count: 1
+          - title: "Assistant Director"
+            grade: "SL9"
+            count: 2
+          - title: "OD Practitioner"
+            grade: "SL8"
+            count: 2
+
+      - name: "Subdirectorate: Service Delivery Initiatives"
+        type: "Subdirectorate"
+        purpose: "To facilitate transversal service delivery initiatives."
+        functions:
+          - "Coordinate Service Delivery Improvement Plans (SDIPs)."
+          - "Manage the provincial Batho Pele programme."
+          - "Evaluate and report on impact of departmental capacity improvement solutions (incl SDIPs)."
+        roles:
+          - title: "Deputy Director"
+            grade: "SL11"
+            count: 1
+          - title: "Assistant Director"
+            grade: "SL9"
+            count: 2
+          - title: "OD Practitioner"
+            grade: "SL8"
+            count: 1

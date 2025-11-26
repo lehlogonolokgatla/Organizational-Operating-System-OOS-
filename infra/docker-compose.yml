@@ -1,0 +1,69 @@
+version: '3.8'
+
+services:
+  # 1. THE DATABASE
+  db:
+    image: postgres:15-alpine
+    container_name: oos-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: oos_user
+      POSTGRES_PASSWORD: oos_password
+      POSTGRES_DB: oos_db
+    ports:
+      - "5432:5432" # Allows you to inspect DB from your PC
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - oos-net
+
+  # 2. ORG REGISTRY (Updated to talk to DB)
+  org-registry:
+    build: ../services/org-registry
+    container_name: oos-registry
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../config:/app/config
+    environment:
+      - DATABASE_URL=postgresql://oos_user:oos_password@db/oos_db
+    depends_on:
+      - db
+    networks:
+      - oos-net
+
+  workflow-engine:
+    build: ../services/workflow-engine
+    container_name: oos-workflow
+    ports:
+      - "8001:8001"
+    networks:
+      - oos-net
+
+  analytics-service:
+    build: ../services/analytics-service
+    container_name: oos-analytics
+    ports:
+      - "8002:8002"
+    depends_on:
+      - org-registry
+    networks:
+      - oos-net
+
+  dashboard:
+    build: ../services/dashboard
+    container_name: oos-dashboard
+    ports:
+      - "3005:5173"
+    depends_on:
+      - org-registry
+      - analytics-service
+    networks:
+      - oos-net
+
+networks:
+  oos-net:
+    driver: bridge
+
+volumes:
+  postgres_data:

@@ -2,6 +2,9 @@ Organizational Operating System (OOS)
 
 A Digital Twin platform for modeling, staffing, and analyzing organizational performance in real-time.
 
+<img width="1297" height="616" alt="node creation" src="https://github.com/user-attachments/assets/880a20f7-a167-487c-82ef-eeb560c17afb" />
+
+
 📌 Overview
 
 OOS enables governments, hospitals and enterprises to design their organograms, allocate staff, define KPIs/metrics, and monitor performance over time — all inside an interactive digital twin.

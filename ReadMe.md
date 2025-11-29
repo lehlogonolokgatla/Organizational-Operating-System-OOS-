@@ -1,26 +1,73 @@
-# Organizational Operating System (OOS)
+Organizational Operating System (OOS)
 
 A Digital Twin platform for modeling, staffing, and analyzing organizational performance in real-time.
 
-## 🚀 Features
-*   **Digital Twin:** Dynamic visualization of org structures (ReactFlow).
-*   **Org Designer:** Drag-and-drop builder to create departments, roles, and hierarchies.
-*   **M&E Engine:** Track Planned Targets vs. Reported Actuals with automated variance analysis.
-*   **Smart Diagnostics:** Automated "Health Check" detects high vacancy rates and budget overspends.
-*   **Governance:** Role-Based Access Control (RBAC) modeling.
+📌 Overview
 
-## 🛠️ Tech Stack
-*   **Frontend:** React, Vite, ReactFlow
-*   **Backend:** Python FastAPI
-*   **Database:** PostgreSQL (Dockerized)
-*   **Infrastructure:** Docker Compose
+OOS enables governments, hospitals and enterprises to design their organograms, allocate staff, define KPIs/metrics, and monitor performance over time — all inside an interactive digital twin.
 
-## ⚡ Quick Start
-1.  Ensure Docker is running.
-2.  Run `docker-compose up --build`
-3.  Open `http://localhost:5173` (or port defined in compose).
+🚀 Key Features
+🏛 Digital Twin
 
-## 📸 Capabilities
-*   **Design Mode:** Create units and roles.
-*   **Report Mode:** Enter quarterly actuals.
-*   **View Mode:** Visualize performance sparklines and traffic-light indicators.# Organizational-Operating-System-OOS-
+Visualize the full organizational structure using ReactFlow-powered node trees.
+
+🧩 Org Designer
+
+Drag-and-drop creation of Departments, Units, Roles & Reporting Lines.
+<img width="1297" height="616" alt="staff overview" src="https://github.com/user-attachments/assets/b10e68ca-a6e6-4890-96a0-91414ab538de" />
+
+📊 M&E Engine
+<img width="1297" height="616" alt="metrics" src="https://github.com/user-attachments/assets/6eacb78d-db63-4f36-95f7-86114824ad2d" />
+
+Track Planned Targets vs Actuals, analyze variance, and monitor scorecards live.
+
+🔍 Smart Diagnostics
+
+Automated Health Check flags performance risks such as:
+
+High vacancy rates
+
+Underperformance on scorecard metrics
+
+Budget overspend alerts
+
+🔐 Governance & RBAC
+
+Role-based access control for managing authorization & permissions.
+
+🛠 Tech Stack
+Layer	Technology
+Frontend	React + Vite + ReactFlow
+Backend	FastAPI (Python)
+Database	PostgreSQL (Docker)
+Deployment	Docker Compose
+⚡ Quick Start
+docker-compose up --build
+
+
+Then open:
+
+http://localhost:5173
+
+📸 Platform Screenshots
+🔹 Organogram View (Digital Twin)
+
+🔹 Staff Assignment Screen
+
+🔹 Metrics & Scorecard Tracking
+
+📡 Capabilities Summary
+Mode	Functionality
+Design Mode	Build org charts, units, roles, hierarchies
+Staff Mode	Assign personnel to posts, manage grades & roles
+Metrics Mode	Define KPIs, targets, scorecards & track progress
+Governance Mode	RBAC + health compliance modelling
+View Mode	Visual roll-up indicators (traffic lights, variance bars)
+Report Mode	Capture quarterly actual performance values
+🔥 Future Add-Ons
+
+AI-based workforce optimization
+
+Document + process map linking
+
+API export to ERP / HR systems
